@@ -1,16 +1,17 @@
+from ast import Return
 from django.http.request import QueryDict
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
-from AppCoder.models import Curso, Profesor
-from AppCoder.forms import CursoFormulario, ProfesorFormulario
+from AppCoder.models import Categoria,Juego
+from AppCoder.forms import tiendaFormulario, ProfesorFormulario
 
 # Create your views here.
 
-def curso(request):
+def categoria(request):
 
-      curso =  Curso(nombre="Desarrollo web", camada="19881")
-      curso.save()
-      documentoDeTexto = f"--->Curso: {curso.nombre}   Camada: {curso.camada}"
+      categoria =  Categoria(nombre="Acción", año="1989")
+      categoria.save()
+      documentoDeTexto = f"--->Categoria: {categoria.nombre}   Año: {categoria.año}"
 
 
       return HttpResponse(documentoDeTexto)
@@ -20,23 +21,27 @@ def inicio(request):
 
       return render(request, "AppCoder/inicio.html")
 
+def contacto(request):
+    
+      return render(request, "AppCoder/contacto.html")
 
 
-def estudiantes(request):
 
-      return render(request, "AppCoder/estudiantes.html")
+def juegos(request):
 
-
-def entregables(request):
-
-      return render(request, "AppCoder/entregables.html")
+      return render(request, "AppCoder/juegos.html")
 
 
-def cursos(request):
+def reservas(request):
+
+      return render(request, "AppCoder/reservas.html")
+
+
+def tienda(request):
 
       if request.method == 'POST':
 
-            miFormulario = CursoFormulario(request.POST) #aquí mellega toda la información del html
+            miFormulario = tiendaFormulario(request.POST) #aquí mellega toda la información del html
 
             print(miFormulario)
 
@@ -44,22 +49,22 @@ def cursos(request):
 
                   informacion = miFormulario.cleaned_data
 
-                  curso = Curso (nombre=informacion['curso'], camada=informacion['camada']) 
+                  tienda = Juego (nombre=informacion['nombre'], precio=informacion['precio']) 
 
-                  curso.save()
+                  tienda.save()
 
                   return render(request, "AppCoder/inicio.html") #Vuelvo al inicio o a donde quieran
 
       else: 
 
-            miFormulario= CursoFormulario() #Formulario vacio para construir el html
+            miFormulario= tiendaFormulario() #Formulario vacio para construir el html
 
-      return render(request, "AppCoder/cursos.html", {"miFormulario":miFormulario})
-
-
+      return render(request, "AppCoder/juegos.html", {"miFormulario":miFormulario})
 
 
-def profesores(request):
+
+
+#def profesores(request):
 
       if request.method == 'POST':
 
@@ -91,13 +96,13 @@ def profesores(request):
 
 def buscar(request):
 
-      if  request.GET["camada"]:
+      if  request.GET["nombre"]:
 
-	      #respuesta = f"Estoy buscando la camada nro: {request.GET['camada'] }" 
-            camada = request.GET['camada'] 
-            cursos = Curso.objects.filter(camada__icontains=camada)
+	      #respuesta = f"Estoy buscando la camada nro: {request.GET['nombre'] }" 
+            nombre = request.GET['nombre'] 
+            nombre = Juego.objects.filter(nombre__icontains=nombre)
 
-            return render(request, "AppCoder/inicio.html", {"cursos":cursos, "camada":camada})
+            return render(request, "AppCoder/inicio.html", {"nombre":nombre})
 
       else: 
 

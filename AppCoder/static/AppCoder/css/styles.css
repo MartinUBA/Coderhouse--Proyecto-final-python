@@ -47,7 +47,7 @@
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
-  --bs-light-rgb: 248, 249, 250;
+  --bs-light-rgb: 17, 5, 53;
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
@@ -3024,7 +3024,7 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: #450086;
   border-color: #0d6efd;
 }
 .btn-primary:hover {
@@ -3040,7 +3040,7 @@ textarea.form-control-lg {
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0a58ca;
+  background-color: #0a57ca00;
   border-color: #0a53be;
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
@@ -4045,7 +4045,7 @@ textarea.form-control-lg {
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
-  margin-right: 1rem;
+  margin-right: -9rem;
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
@@ -4432,10 +4432,10 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(158, 0, 255, 1);
 }
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.55);
@@ -11313,10 +11313,10 @@ header.masthead h1, header.masthead .h1 {
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 12rem;
-    padding-bottom: 12rem;
+    padding-bottom: 22rem;
   }
   header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -11373,6 +11373,12 @@ footer.footer {
 
   height: 100px;
   width: 262px;
+  position:relative;
+  right: 154px;
+}
 
+.font-pixelart {
+
+  font-family: '8BIT WONDER', sans-serif;
 }
 

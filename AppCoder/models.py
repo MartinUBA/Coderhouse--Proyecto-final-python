@@ -1,24 +1,23 @@
 from django.db import models
 
 # Create your models here.
-class Curso(models.Model):
+class Categoria(models.Model):
 
     nombre=models.CharField(max_length=40)
-    camada = models.IntegerField()
+    año = models.IntegerField()
 
 
-class Estudiante(models.Model):
+class Juego(models.Model):
     nombre= models.CharField(max_length=30)
-    apellido= models.CharField(max_length=30)
-    email= models.EmailField()
+    precio= models.FloatField(max_length=30)
 
-class Profesor(models.Model):
+
+class Empresa(models.Model):
     nombre= models.CharField(max_length=30)
-    apellido= models.CharField(max_length=30)
     email= models.EmailField()
-    profesion= models.CharField(max_length=30)
+    
 
-class Entregable(models.Model):
+class Reservas(models.Model):
     nombre= models.CharField(max_length=30)
     fechaDeEntrega = models.DateField()  
     entregado = models.BooleanField()

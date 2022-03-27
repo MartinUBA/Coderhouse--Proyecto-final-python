@@ -1,11 +1,11 @@
 from django import forms
 
 
-class CursoFormulario(forms.Form):
+class tiendaFormulario(forms.Form):
 
     #Especificar los campos
-    curso = forms.CharField()
-    camada = forms.IntegerField()
+    nombre = forms.CharField()
+    precio = forms.FloatField()
 
 
 class ProfesorFormulario(forms.Form):   

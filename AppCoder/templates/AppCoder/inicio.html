@@ -6,16 +6,16 @@
 
 
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>8BITsales TU TIENDA DE JUEGOS RETRO</h1>
+    <h1> </h1>
     
     
    
     
-    <h3>Busca tu juego!:</h3>
+    <h3 align="center">Busca tu juego!</h3>
 
-    <form action="/AppCoder/buscar/" method="GET">
+    <form action="/AppCoder/buscar/" method="GET" align="center">
 
-        <input type="number" name="camada" id="camada">
+        <input type="text" name="nombre" id="nombre">
 
         <input type="submit" value="Buscar">
 
@@ -24,16 +24,17 @@
 
     </form>
 
-    
+    <div style="margin-bottom: 20px;"> </div>
+    <span> </span>
 
-    {% if cursos %}
+    {% if juegos %}
 
-    <p>Estamos buscando el: {{camada}}</p>
+    <p>Estamos buscando el: {{nombre}}</p>
 
     <ul>
-	{% for curso in cursos %}
-		<li> {{curso.nombre}} </li>
-		<li> {{curso.camada}} </li>
+	{% for juego in juegos %}
+		<li> {{juegos.nombre}} </li>
+		<li> {{juegos.precio}} </li>
 	{% endfor %}
 
     </ul>

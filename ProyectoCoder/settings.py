@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'ProyectoCoder.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'proyectocoder1',
+        'USER':'postgres',
+        'PASSWORD':'Petinato1',
+        'HOST': '127.0.0.1',
+        'DATABASE_PORT':'5432',
     }
 }
 
