@@ -8,28 +8,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title> CINE </title>
+        <title> STEAM </title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{%static 'AppCoder/assets/favicon.ico' %}" />
+        <link rel="icon" type="image/x-icon" href="{%static 'AppCoder/assets/8bit-1.jpg' %}" />
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{%static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
-
+        
 
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
+                <a href="{% url 'Inicio' %}"><img src= "{%static 'AppCoder/assets/a.gif' %}" class="navbar-logo"> </a>´
                 <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>´
-                <a class="navbar-brand" href="{% url 'Profesores' %}">Profesores</a>
-                <a class="navbar-brand" href="{% url 'Cursos' %}">Cursos</a>
-                <a class="navbar-brand" href="{% url 'Estudiantes' %}">Estudiantes</a>
-                <a class="navbar-brand" href="{% url 'Entregables' %}">Entregables</a>
-                <a class="btn btn-primary" href="#NADAAUN">INICIAR</a>
+                <a class="navbar-brand" href="{% url 'Profesores' %}">Tienda</a>
+                <a class="navbar-brand" href="{% url 'Cursos' %}">Noticias</a>
+                <a class="navbar-brand" href="{% url 'Estudiantes' %}">Contacto</a>
+                <a class="navbar-brand" href="{% url 'Entregables' %}">Reservas</a>
+                <a class="btn btn-primary" href="#NADAAUN">8BIT PREMIUM</a>
             </div>
         </nav>
 
@@ -41,7 +42,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">CINE DISCO</h1>
+                            <h1 class="mb-5">8BITsales</h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -79,7 +80,7 @@
                             <li class="list-inline-item"><a href="#!">Contacto</a></li>
                       
                         </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; Cine Disco - Derechos Reservados.</p>
+                        <p class="text-muted small mb-4 mb-lg-0">&copy; 8BITsales - Derechos Reservados.</p>
                     </div>
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">

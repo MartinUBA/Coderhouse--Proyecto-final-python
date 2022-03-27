@@ -11290,10 +11290,12 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/cine-1.jpg") no-repeat center center;
+  background: url("../assets/img/8bit-1.jpg") no-repeat center center;
   background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  height: 10px;
+  width: 100%;
+  padding-top: 4px !important;
+  padding-bottom: 4px;
 }
 header.masthead:before {
   content: "";
@@ -11346,7 +11348,7 @@ header.masthead h1, header.masthead .h1 {
 .call-to-action {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/cine-1.jpg") no-repeat center center;
+  background: url("../assets/img/8bit-1.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
   padding-bottom: 7rem;
@@ -11366,3 +11368,11 @@ footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+.navbar-logo {
+
+  height: 100px;
+  width: 262px;
+
+}
+
