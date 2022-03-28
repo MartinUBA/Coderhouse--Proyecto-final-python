@@ -4,10 +4,26 @@
 
 {% block contenidoQueCambia %}
 
-
+    <body>
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Juegos </h1>
-    <p>Catálogo </p>
+    <h1 class="catalogo" align="center">CATÁLOGO </h1>
+        <br>
+        <br>
+    
+        
+        {%for juego in nombre %}
+        <p style="align-items: center;">  
+            <div style="align-items: center;">
+            <h3>
+            <li class ="catalogo" align="center">{{juego}}</li>
+            </h3>
+            </div>
+        </p>
+        
+            
+        {% endfor %}
+     
+    </body>
 
   
 

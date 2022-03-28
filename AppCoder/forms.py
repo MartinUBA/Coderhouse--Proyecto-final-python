@@ -1,15 +1,21 @@
 from django import forms
 
 
-class tiendaFormulario(forms.Form):
+class JuegoFormulario(forms.Form):
 
-    #Especificar los campos
     nombre = forms.CharField()
-    precio = forms.FloatField()
+    precio = forms.IntegerField()
+    stock= forms.IntegerField()
 
-
-class ProfesorFormulario(forms.Form):   
+class ClientesFormulario(forms.Form):   
     nombre= forms.CharField(max_length=30)
     apellido= forms.CharField(max_length=30)
     email= forms.EmailField()
-    profesion= forms.CharField(max_length=30)
+    direccion=forms.CharField(max_length=50)
+    edad=forms.IntegerField()
+    fechaDeEntrega= forms.DateField()
+    entregado=forms.BooleanField()
+
+class ServiciosFormulario(forms.Form):
+    servicio= forms.CharField(max_length=30)
+    precio= forms.IntegerField()

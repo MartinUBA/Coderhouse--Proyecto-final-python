@@ -11,34 +11,20 @@
     
    
     
-    <h3 align="center">Busca tu juego!</h3>
+    <h3 align="center" class="catalogo">Busca tu juego!</h3>
 
-    <form action="/AppCoder/buscar/" method="GET" align="center">
+    <body>
 
+        <form action="/AppCoder/buscar/" method="GET" align="center"> 
+    
         <input type="text" name="nombre" id="nombre">
-
-        <input type="submit" value="Buscar">
-
-
-
-
-    </form>
+    
+        <input type="submit" value="Buscar" />
+        </form>
+      </body>
 
     <div style="margin-bottom: 20px;"> </div>
     <span> </span>
 
-    {% if juegos %}
-
-    <p>Estamos buscando el: {{nombre}}</p>
-
-    <ul>
-	{% for juego in juegos %}
-		<li> {{juegos.nombre}} </li>
-		<li> {{juegos.precio}} </li>
-	{% endfor %}
-
-    </ul>
-
-    {% endif %}
 
 {% endblock %}

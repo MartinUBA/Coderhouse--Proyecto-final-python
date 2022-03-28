@@ -12,11 +12,13 @@ urlpatterns = [
     #path('cursos', views.cursos, name="Cursos"),
     #path('profesores', views.profesores, name="Profesores"),
     path('juegos', views.juegos, name="Juegos"),
-    path('reservas', views.reservas, name="Reservas"),
-    path('tiendaFormulario', views.tiendaFormulario, name="tiendaFormulario"),
+    path('servicios', views.servicios, name="Servicios"),
+    path('juegoFormulario', views.juegoFormulario, name="JuegoFormulario"),
+    path('clientesFormulario', views.clientesFormulario, name="ClientesFormulario"),
+    path('serviciosFormulario', views.serviciosFormulario, name="ServiciosFormulario"),
     path('contacto', views.contacto, name="Contacto"),
     #path('profesorFormulario', views.profesorFormulario, name="ProfesorFormulario"),
-    #path('busquedaCamada',  views.busquedaCamada, name="BusquedaCamada"),
+    path('busquedaJuego',  views.busquedaJuego, name="BusquedaJuego"),
     path('buscar/', views.buscar),
    
 ]

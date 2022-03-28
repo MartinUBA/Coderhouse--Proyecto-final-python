@@ -2,19 +2,12 @@ from ast import Return
 from django.http.request import QueryDict
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
-from AppCoder.models import Categoria,Juego
-from AppCoder.forms import tiendaFormulario, ProfesorFormulario
-
+from AppCoder.models import Categoria, Clientes,Juego, Servicio
+from AppCoder.forms import JuegoFormulario, ClientesFormulario, ServiciosFormulario
+from django.views.generic import ListView
 # Create your views here.
 
-def categoria(request):
 
-      categoria =  Categoria(nombre="Acción", año="1989")
-      categoria.save()
-      documentoDeTexto = f"--->Categoria: {categoria.nombre}   Año: {categoria.año}"
-
-
-      return HttpResponse(documentoDeTexto)
 
 
 def inicio(request):
@@ -29,19 +22,40 @@ def contacto(request):
 
 def juegos(request):
 
-      return render(request, "AppCoder/juegos.html")
+      juegos=Juego.objects.all()
+      return render(request, "AppCoder/juegos.html", {"nombre": juegos})
 
 
-def reservas(request):
+def servicios(request):
 
-      return render(request, "AppCoder/reservas.html")
+      return render(request, "AppCoder/servicios.html")
 
 
-def tienda(request):
+def juegoFormulario(request):
+    
+      if request.method == "POST":
+
+            miFormulario = JuegoFormulario(request.POST) # Aqui me llega la informacion del html
+            print(miFormulario)
+
+            if miFormulario.is_valid:
+                  informacion = miFormulario.cleaned_data
+                  juego = Juego(nombre=informacion["nombre"], precio=informacion["precio"], stock=informacion["stock"])
+                  juego.save()
+                  return render(request, "AppCoder/inicio.html")
+      else:
+            miFormulario = JuegoFormulario()
+
+      return render(request, "AppCoder/juegoFormulario.html", {"miFormulario": miFormulario})
+
+
+
+
+def clientesFormulario(request):
 
       if request.method == 'POST':
 
-            miFormulario = tiendaFormulario(request.POST) #aquí mellega toda la información del html
+            miFormulario = ClientesFormulario(request.POST) #aquí mellega toda la información del html
 
             print(miFormulario)
 
@@ -49,26 +63,25 @@ def tienda(request):
 
                   informacion = miFormulario.cleaned_data
 
-                  tienda = Juego (nombre=informacion['nombre'], precio=informacion['precio']) 
+                  cliente = Clientes(nombre=informacion['nombre'],apellido=informacion['apellido'],email=informacion['email'],
+                  direccion=informacion['direccion'],edad=informacion['edad'], fechaDeEntrega=informacion['fechaDeEntrega'],entregado=informacion['entregado'] )
+                  
 
-                  tienda.save()
+                  cliente.save()
 
                   return render(request, "AppCoder/inicio.html") #Vuelvo al inicio o a donde quieran
 
       else: 
 
-            miFormulario= tiendaFormulario() #Formulario vacio para construir el html
+            miFormulario= ClientesFormulario() #Formulario vacio para construir el html
 
-      return render(request, "AppCoder/juegos.html", {"miFormulario":miFormulario})
+      return render(request, "AppCoder/clientesFormulario.html", {"miFormulario":miFormulario})
 
-
-
-
-#def profesores(request):
-
+def serviciosFormulario(request):
+    
       if request.method == 'POST':
 
-            miFormulario = ProfesorFormulario(request.POST) #aquí mellega toda la información del html
+            miFormulario = ServiciosFormulario(request.POST) #aquí mellega toda la información del html
 
             print(miFormulario)
 
@@ -76,33 +89,33 @@ def tienda(request):
 
                   informacion = miFormulario.cleaned_data
 
-                  profesor = Profesor (nombre=informacion['nombre'], apellido=informacion['apellido'],
-                   email=informacion['email'], profesion=informacion['profesion']) 
+                  servicio = Servicio (servicio=informacion['servicio'],precio=informacion['precio'])
+                  
 
-                  profesor.save()
+                  servicio.save()
 
                   return render(request, "AppCoder/inicio.html") #Vuelvo al inicio o a donde quieran
 
       else: 
 
-            miFormulario= ProfesorFormulario() #Formulario vacio para construir el html
+            miFormulario= ServiciosFormulario() #Formulario vacio para construir el html
 
-      return render(request, "AppCoder/profesores.html", {"miFormulario":miFormulario})
+      return render(request, "AppCoder/serviciosFormulario.html", {"miFormulario":miFormulario})
 
 
 
+def busquedaJuego(request):
+      return render(request, "AppCoder/busquedaJuego.html")
 
 
 
 def buscar(request):
-
-      if  request.GET["nombre"]:
-
-	      #respuesta = f"Estoy buscando la camada nro: {request.GET['nombre'] }" 
+      if request.GET ['nombre']:    
+            #respuesta = f"Estoy buscando el juego: {request.GET['nombre'] }" 
             nombre = request.GET['nombre'] 
             nombre = Juego.objects.filter(nombre__icontains=nombre)
 
-            return render(request, "AppCoder/inicio.html", {"nombre":nombre})
+            return render(request, "AppCoder/resultadosPorBusqueda.html", {"nombre":nombre})
 
       else: 
 

@@ -60,7 +60,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #2d0a4e;
 }
 
 *,
@@ -4434,6 +4434,7 @@ textarea.form-control-lg {
 .navbar-light .navbar-brand {
   color: rgba(158, 0, 255, 1);
 }
+
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
   color: rgba(255, 255, 255, 0.9);
 }
@@ -11374,7 +11375,7 @@ footer.footer {
   height: 100px;
   width: 262px;
   position:relative;
-  right: 154px;
+  right: 43px;
 }
 
 .font-pixelart {
@@ -11382,3 +11383,7 @@ footer.footer {
   font-family: '8BIT WONDER', sans-serif;
 }
 
+.catalogo {
+
+  color: #f9fafb;
+}
