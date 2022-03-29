@@ -6,6 +6,7 @@ class JuegoFormulario(forms.Form):
     nombre = forms.CharField()
     precio = forms.IntegerField()
     stock= forms.IntegerField()
+    imagen= forms.ImageField()
 
 class ClientesFormulario(forms.Form):   
     nombre= forms.CharField(max_length=30)

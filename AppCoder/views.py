@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from AppCoder.models import Categoria, Clientes,Juego, Servicio
 from AppCoder.forms import JuegoFormulario, ClientesFormulario, ServiciosFormulario
 from django.views.generic import ListView
+
 # Create your views here.
 
 
@@ -23,12 +24,12 @@ def contacto(request):
 def juegos(request):
 
       juegos=Juego.objects.all()
-      return render(request, "AppCoder/juegos.html", {"nombre": juegos})
+      return render(request, "AppCoder/juegos.html", {"juegos": juegos})
 
 
 def servicios(request):
-
-      return render(request, "AppCoder/servicios.html")
+      servicios=Servicio.objects.all()
+      return render(request, "AppCoder/servicios.html",{"nombre": servicios})
 
 
 def juegoFormulario(request):
@@ -40,7 +41,7 @@ def juegoFormulario(request):
 
             if miFormulario.is_valid:
                   informacion = miFormulario.cleaned_data
-                  juego = Juego(nombre=informacion["nombre"], precio=informacion["precio"], stock=informacion["stock"])
+                  juego = Juego(nombre=informacion["nombre"], precio=informacion["precio"], stock=informacion["stock"], imagen=informacion["imagen"])
                   juego.save()
                   return render(request, "AppCoder/inicio.html")
       else:

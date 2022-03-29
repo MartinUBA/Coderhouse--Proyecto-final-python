@@ -6,8 +6,32 @@
 
 
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h1>Servicios</h1>
-    <p>Productos Reservados</p>
+    
+    <body>
+        <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+        <h3 class="catalogo" align="center">SERVICIOS </h3>
+            <br>
+            <br>
+        
+            
+            {%for servicios in nombre %}
+            
+            <p style="align-items: center;">  
+                <div style="align-items: center;">
+                    
+                <h3>
+                <li class ="catalogo" align="center">{{servicios}}</li>
+                <li class ="catalogo" align="center"> <img src="{{juego.imagen}}" alt="">{{juego.imagen}}</li>
+                </h3>
+                </div>
+            </p>
+            
+                
+            {% endfor %}
+         
+        </body>
+    
+      
 
   
 

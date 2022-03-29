@@ -1,3 +1,10 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +15,26 @@
 </head>
 <body>
 {% if nombre %}
+<div class="catalogo" >
+<h1 class="navbar-brand">Ha seleccionado el siguiente juego:</h1>
 
-<p>Estamos buscando el: {{nombre}}</p>
+<br>
+
 
 <ul>
-{% for juegos in juego %}
-    <li> {{juegos.nombre}} </li>
-    <li> {{juegos.precio}} </li>
-    <li> {{juegos.stock}} </li>
-{% endfor %}
+{% for juego in nombre %}
+    <div class="navbar-brand" >
+    <li style="font-weight:bold"> <u> NOMBRE</u>: &nbsp &nbsp {{juego.nombre}} </li>
+    <li> <u> PRECIO </u>: &nbsp &nbsp {{juego.precio}} $</li>
+    <li> <u> STOCK</u>: &nbsp &nbsp {{juego.stock}} </li>
+    </div>
+    {% endfor %}
 
 </ul>
+</div>
 {% endif %}
 
 </body>
 </html>
+
+{% endblock %}

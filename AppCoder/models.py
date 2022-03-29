@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 
 # Create your models here.
@@ -11,6 +12,7 @@ class Juego(models.Model):
     nombre= models.CharField(max_length=30)
     precio= models.FloatField(max_length=30)
     stock= models.IntegerField()
+    imagen= models.ImageField(upload_to='juegos')
 
     class Meta:
         verbose_name='juego'
@@ -18,7 +20,9 @@ class Juego(models.Model):
     
 
     def __str__(self):
-        return f"Nombre: {self.nombre} - Precio {self.precio} - Stock {self.stock}"
+        return f"Nombre: {self.nombre} - Precio:   {self.precio} $- Stock:   {self.stock}"
+    
+    
 
 class Empresa(models.Model):
     nombre= models.CharField(max_length=30)
@@ -34,9 +38,18 @@ class Clientes(models.Model):
     fechaDeEntrega = models.DateField()  
     entregado = models.BooleanField()
 
+    def __str__(self):
+        return f"Nombre: {self.nombre} - Apellido:   {self.apellido} - Email:   {self.email} - direccion:   {self.direccion} - edad:   {self.edad} - Fecha de entrega:   {self.fechaDeEntrega} - Entregado:   {self.entregado}"
+
 class Servicio(models.Model):
     servicio= models.CharField(max_length=40)
     precio=models.IntegerField()
 
 
+    class Meta:
+        verbose_name='servicio'
+        verbose_name_plural='servicios'
+    
 
+    def __str__(self):
+        return f"Nombre: {self.servicio} - Precio:   {self.precio} $"

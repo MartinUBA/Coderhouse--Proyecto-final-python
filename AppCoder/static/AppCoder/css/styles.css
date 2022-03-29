@@ -4046,9 +4046,11 @@ textarea.form-control-lg {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: -9rem;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   text-decoration: none;
   white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 .navbar-nav {
   display: flex;
@@ -11387,3 +11389,5 @@ footer.footer {
 
   color: #f9fafb;
 }
+
+
