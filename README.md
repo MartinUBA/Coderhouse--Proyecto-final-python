@@ -13,10 +13,9 @@
 ## Project Status
 Project is: _in progress
 
-Funcionalidades:
-
--Se aplica herencia de plantillas sobre la plantilla base "inicio".
--Se han creado 5 clases: Juego, Categoría, Empresa, Clientes y Servicio.
--Se ha creado un formulario que ingresa información a la base de datos de "juegos (../juegoFormulario", "servicios" (../serviciosFormulario) y "clientes" (../clientesFormulario).
--Se ingresa al buscador de juegos desde la solapa inicial.
+## Funcionalidades
+- Se aplica herencia de plantillas sobre la plantilla base "inicio".
+- Se han creado 5 clases: Juego, Categoría, Empresa, Clientes y Servicio.
+- Se ha creado un formulario que ingresa información a la base de datos de "juegos (../juegoFormulario", "servicios" (../serviciosFormulario) y "clientes" (../clientesFormulario).
+- Se ingresa al buscador de juegos desde la solapa inicial.
 
