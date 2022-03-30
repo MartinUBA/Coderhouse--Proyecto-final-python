@@ -20,7 +20,7 @@ class Juego(models.Model):
     
 
     def __str__(self):
-        return f"Nombre: {self.nombre} - Precio:   {self.precio} $- Stock:   {self.stock}"
+        return f"Nombre: {self.nombre} - Precio:   {self.precio} $- Stock:   {self.stock} uni."
     
     
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leer Juegos</title>
+</head>
+<body>
+    <body>
+
+        {% for j in juegos %}
+    
+            <li>{{j}}</li>  
+            <button>
+                <a href="{% url 'EliminarJuego' j.nombre %}"> Eliminar</a>
+                <a href="{% url 'EditarJuego' j.nombre %}"> Editar</a>
+
+            </button>
+    
+    
+        {% endfor %}
+    
+        <br>
+        <a href="juegoFormulario">Agregar otro Juego</a>
+    
+        
+    </body>
+    
+</body>
+</html>
+

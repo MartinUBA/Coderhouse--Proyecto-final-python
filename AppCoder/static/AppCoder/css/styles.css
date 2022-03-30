@@ -11300,6 +11300,17 @@ header.masthead {
   padding-top: 4px !important;
   padding-bottom: 4px;
 }
+header.masthead-juegoFormulario {
+  position: relative;
+  background-color: #343a40;
+  background: url("../assets/img/paisaje.jpg") no-repeat center center;
+  background-size: cover ;
+  height: 201px;
+  width: 100%;
+  padding-top: 4px !important;
+  padding-bottom: 4px;
+}
+
 header.masthead:before {
   content: "";
   position: absolute;
@@ -11389,5 +11400,7 @@ footer.footer {
 
   color: #f9fafb;
 }
+
+
 
 

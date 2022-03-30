@@ -124,3 +124,49 @@ def buscar(request):
 
       #No olvidar from django.http import HttpResponse
       return HttpResponse(respuesta)
+
+def leerJuegos(request):
+    
+      juegos = Juego.objects.all() #trae todos los juegos
+
+      contexto= {"juegos":juegos} 
+
+      return render(request, "AppCoder/leerJuegos.html",contexto)
+
+
+def eliminarJuego(request, juego_nombre):
+    
+    juego = Juego.objects.get(nombre=juego_nombre)
+    juego.delete()
+
+    # vuelvo al menú
+    juegos = Juego.objects.all()  # trae todos los juegos
+
+    contexto = {"juegos": juegos}
+
+    return render(request, "AppCoder/leerJuegos.html", contexto)
+
+def editarJuego(request, juego_nombre):
+      # Recibe el nombre del juego que vamos a modificar
+  juego = Juego.objects.get(nombre=juego_nombre)
+  # Si es metodo POST hago lo mismo que el agregar
+  if request.method == 'POST':
+    # aquí mellega toda la información del html
+    miFormulario = JuegoFormulario(request.POST)
+    print(miFormulario)
+    if miFormulario.is_valid: # Si pasó la validación de Django
+      informacion = miFormulario.cleaned_data
+      juego.nombre = informacion['nombre']
+      juego.precio = informacion['precio']
+      juego.stock = informacion['stock']
+      juego.imagen = informacion['imagen']
+      juego.save()
+      # Vuelvo al inicio o a donde quieran
+      return render(request, "AppCoder/inicio.html")
+  # En caso que no sea post
+  else:
+    # Creo el formulario con los datos que voy a modificar
+    miFormulario = JuegoFormulario(initial={'nombre': juego.nombre, 'precio': juego.precio,
+                          'stock': juego.stock, 'imagen': juego.imagen})
+  # Voy al html que me permite editar
+  return render(request, "AppCoder/editarJuego.html", {"miFormulario": miFormulario, "juego_nombre": juego_nombre})

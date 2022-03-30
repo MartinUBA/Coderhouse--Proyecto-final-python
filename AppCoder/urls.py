@@ -20,6 +20,10 @@ urlpatterns = [
     #path('profesorFormulario', views.profesorFormulario, name="ProfesorFormulario"),
     path('busquedaJuego',  views.busquedaJuego, name="BusquedaJuego"),
     path('buscar/', views.buscar),
+    path('leerJuegos', views.leerJuegos, name = "LeerJuegos"),
+    path('eliminarJuego/<juego_nombre>/', views.eliminarJuego, name="EliminarJuego"),
+    path('editarJuego/<juego_nombre>/', views.editarJuego, name="EditarJuego"),
+
    
 ]
 urlpatterns+= static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
