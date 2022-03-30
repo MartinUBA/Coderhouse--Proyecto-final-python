@@ -7,18 +7,19 @@
     <body>
         
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h3 class="catalogo" align="center">CATÁLOGO </h3>
+    <h4 class="catalogo-precio, font-pixelart" align="left" style="color:#2e82ff ;">CATÁLOGO: </h4>
         <br>
         <br>
     
         
         {%for juego in juegos %}
         
-        <p style="align-items: center;">  
+        <p style="align-items: center;" >  
             <div style="align-items: center;">
-                <div class="container">
+                <div class="container" >
                 <h3>
-                <li class ="catalogo" align="center">{{juego}}</li>
+                <p class ="catalogo, font-pixelart" align="center" style="color:azure;">{{juego.nombre}}</p>
+                <p class ="catalogo-precio" align="center">{{juego.precio}} $</p>
                 {% if juego.imagen %}
                 
                 <p class ="catalogo" align="center"> <img src="{{juego.imagen.url}}" alt="" style="width:20%"> </p>
