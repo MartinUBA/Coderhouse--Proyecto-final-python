@@ -20,3 +20,4 @@ class ClientesFormulario(forms.Form):
 class ServiciosFormulario(forms.Form):
     servicio= forms.CharField(max_length=30)
     precio= forms.IntegerField()
+    imagen=forms.ImageField()

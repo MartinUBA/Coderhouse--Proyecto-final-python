@@ -29,7 +29,7 @@ def juegos(request):
 
 def servicios(request):
       servicios=Servicio.objects.all()
-      return render(request, "AppCoder/servicios.html",{"nombre": servicios})
+      return render(request, "AppCoder/servicios.html",{"servicios": servicios})
 
 
 def juegoFormulario(request):
@@ -90,7 +90,7 @@ def serviciosFormulario(request):
 
                   informacion = miFormulario.cleaned_data
 
-                  servicio = Servicio (servicio=informacion['servicio'],precio=informacion['precio'])
+                  servicio = Servicio (servicio=informacion['servicio'],precio=informacion['precio'], imagen=informacion['imagen'])
                   
 
                   servicio.save()

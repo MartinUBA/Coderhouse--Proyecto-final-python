@@ -12,7 +12,7 @@ class Juego(models.Model):
     nombre= models.CharField(max_length=30)
     precio= models.FloatField(max_length=30)
     stock= models.IntegerField()
-    imagen= models.ImageField(upload_to='juegos')
+    imagen= models.ImageField(upload_to='juegos', null=True, blank= True)
 
     class Meta:
         verbose_name='juego'
@@ -44,6 +44,7 @@ class Clientes(models.Model):
 class Servicio(models.Model):
     servicio= models.CharField(max_length=40)
     precio=models.IntegerField()
+    imagen=models.ImageField(upload_to='servicios', null=True, blank= True)
 
 
     class Meta:

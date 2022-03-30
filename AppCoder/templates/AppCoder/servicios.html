@@ -14,15 +14,19 @@
             <br>
         
             
-            {%for servicios in nombre %}
+            {%for servicio in servicios %}
             
             <p style="align-items: center;">  
                 <div style="align-items: center;">
+                    <div class="container">
+                    <h3>
+                    <li class ="catalogo" align="center">{{servicio}}</li>
+                    {% if servicio.imagen %}
                     
-                <h3>
-                <li class ="catalogo" align="center">{{servicios}}</li>
-                <li class ="catalogo" align="center"> <img src="{{juego.imagen}}" alt="">{{juego.imagen}}</li>
-                </h3>
+                    <p class ="catalogo" align="center"> <img src="{{servicio.imagen.url}}" alt="" style="width:20%"> </p>
+                    {% endif %}
+                    </h3>
+                    </div>
                 </div>
             </p>
             
