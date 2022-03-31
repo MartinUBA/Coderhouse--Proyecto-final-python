@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from AppCoder import views
 from django.conf import settings 
@@ -23,6 +23,11 @@ urlpatterns = [
     path('leerJuegos', views.leerJuegos, name = "LeerJuegos"),
     path('eliminarJuego/<juego_nombre>/', views.eliminarJuego, name="EliminarJuego"),
     path('editarJuego/<juego_nombre>/', views.editarJuego, name="EditarJuego"),
+    path('servicio/list', views.ServicioList.as_view(), name='List'),
+    re_path(r'^(?P<pk>\d*)$', views.ServicioDetalle.as_view(), name='Detail'),
+    re_path(r'^nuevo$', views.ServicioCreacion.as_view(), name='New'),
+    re_path(r'^editar/(?P<pk>\d*)$', views.ServicioUpdate.as_view(), name='Edit'),
+    re_path(r'^borrar/(?P<pk>\d*)$', views.ServicioDelete.as_view(), name='Delete'),
 
    
 ]

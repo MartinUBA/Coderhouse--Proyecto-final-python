@@ -5,6 +5,14 @@ from django.http import HttpResponse
 from AppCoder.models import Categoria, Clientes,Juego, Servicio
 from AppCoder.forms import JuegoFormulario, ClientesFormulario, ServiciosFormulario
 from django.views.generic import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView
+
+
+
 
 # Create your views here.
 
@@ -41,7 +49,7 @@ def juegoFormulario(request):
 
             if miFormulario.is_valid:
                   informacion = miFormulario.cleaned_data
-                  juego = Juego(nombre=informacion["nombre"], precio=informacion["precio"], stock=informacion["stock"], imagen=informacion["imagen"])
+                  juego = Juego(nombre=informacion["nombre"], precio=informacion["precio"], stock=informacion["stock"], imagen=informacion['imagen'])
                   juego.save()
                   return render(request, "AppCoder/inicio.html")
       else:
@@ -170,3 +178,33 @@ def editarJuego(request, juego_nombre):
                           'stock': juego.stock, 'imagen': juego.imagen})
   # Voy al html que me permite editar
   return render(request, "AppCoder/editarJuego.html", {"miFormulario": miFormulario, "juego_nombre": juego_nombre})
+
+
+class ServicioList(ListView):
+    
+    model = Servicio
+    template_name = "AppCoder/servicios_list.html"
+
+class ServicioDetalle(DetailView):
+    
+    model = Servicio
+    template_name = "AppCoder/servicios_detalle.html"
+
+
+class ServicioCreacion(CreateView):
+    
+    model = Servicio
+    success_url = "/AppCoder/servicio/list"
+    fields = ['servicio', 'precio', 'imagen']
+
+class ServicioUpdate(UpdateView):
+    
+    model = Servicio
+    success_url = "/AppCoder/servicio/list"
+    fields = ['servicio', 'precio', 'imagen']
+
+class ServicioDelete(DeleteView):
+    
+    model = Servicio
+    success_url = "/AppCoder/servicio/list"
+

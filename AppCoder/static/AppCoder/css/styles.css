@@ -159,6 +159,13 @@ p {
   margin-left: 48px;
 }
 
+.p-footer {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+
+}
+
 abbr[title],
 abbr[data-bs-original-title] {
   -webkit-text-decoration: underline dotted;
@@ -11440,4 +11447,10 @@ footer.footer {
 
 }
 
+.box {
+  width:400px;
+  height:400px;
+  border:3px solid black;
+  filter: drop-shadow(5px 5px 10px violet);
 
+}
