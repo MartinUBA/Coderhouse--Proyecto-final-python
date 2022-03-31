@@ -101,7 +101,7 @@ hr:not([size]) {
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
-  margin-top: 0;
+  margin-top: 20px;
   margin-bottom: 0.5rem;
   font-weight: 700;
   line-height: 1.2;
@@ -136,10 +136,12 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
+  
 }
 @media (min-width: 1200px) {
   h4, .h4 {
     font-size: 1.5rem;
+    margin-top: 12px;
   }
 }
 
@@ -154,6 +156,7 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  margin-left: 48px;
 }
 
 abbr[title],
@@ -11399,6 +11402,7 @@ footer.footer {
 .catalogo {
 
   color: #f9fafb;
+
 }
 
 .catalogo-precio {
@@ -11406,5 +11410,34 @@ footer.footer {
   color:#2e82ff;
 }
 
+.fila {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.boton-comprar {
+
+  width: 174px;
+  height:30px;
+  background-color: #084298;
+  border-radius: .5em;
+  cursor: pointer;
+  transition:background-color 1s;
+  margin-left: 105px;
+
+}
+
+.boton-comprar:hover {
+  background-color: #6f42c1;
+
+}
+
+.boton-comprar p {
+  text-align:inherit;
+  font-size:1em; font-weight:bold;
+  color:#fff;
+  line-height:1.6em;
+
+}
 
 
