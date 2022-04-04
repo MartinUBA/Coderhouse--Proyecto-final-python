@@ -83,7 +83,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background: linear-gradient(to bottom,#110535, #450086);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -355,7 +355,7 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
+  margin: 10px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -11329,10 +11329,11 @@ header.masthead:before {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.5;
+  opacity: 0;
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
+  filter: drop-shadow(4px 4px 7px teal)
 }
 @media (min-width: 768px) {
   header.masthead {
@@ -11389,8 +11390,8 @@ header.masthead h1, header.masthead .h1 {
 }
 
 footer.footer {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .navbar-logo {
@@ -11404,6 +11405,12 @@ footer.footer {
 .font-pixelart {
 
   font-family: '8BIT WONDER', sans-serif;
+
+}
+
+.font-presstart {
+
+  font-family: 'Press Start 2P', cursive;
 }
 
 .catalogo {
@@ -11450,7 +11457,18 @@ footer.footer {
 .box {
   width:400px;
   height:400px;
-  border:3px solid black;
-  filter: drop-shadow(5px 5px 10px violet);
+  border:1px solid black;
+  border-radius: 10px;
+  filter: drop-shadow(3px 3px 6px violet);
 
+}
+
+.box-input {
+  width: 256px;
+  height: 39px;
+  border: 1px solid black;
+  border-radius: 10px;
+  filter: drop-shadow(3px 3px 6px teal);
+  align-content: center;
+  align-items: center;
 }
