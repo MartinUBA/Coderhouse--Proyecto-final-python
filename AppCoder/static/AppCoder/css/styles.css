@@ -359,6 +359,8 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  filter: drop-shadow(2px 2px 3px black);
+
 }
 
 button,
@@ -3034,8 +3036,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #450086;
-  border-color: #0d6efd;
+  background-color: rgb(222 75 117);
+  border-color: #000000;
 }
 .btn-primary:hover {
   color: #fff;
@@ -4444,7 +4446,7 @@ textarea.form-control-lg {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(158, 0, 255, 1);
+  color: rgb(222 75 117);
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
@@ -11322,14 +11324,16 @@ header.masthead-juegoFormulario {
 }
 
 header.masthead:before {
-  content: "";
-  position: absolute;
-  background-color: #1c375e;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
+    content: "";
+    position: absolute;
+    background-color: #1c375e;
+    height: 0%;
+    width: 100%;
+    top: 355px;
+    left: 0;
+    opacity: 0.5;
+    border: 0.1px solid white;
+    filter: drop-shadow(3px 3px 10px white);
 }
 header.masthead h1, header.masthead .h1 {
   font-size: 2rem;
@@ -11468,7 +11472,7 @@ footer.footer {
   height: 39px;
   border: 1px solid black;
   border-radius: 10px;
-  filter: drop-shadow(3px 3px 6px teal);
+  filter: drop-shadow(3px 3px 6px black);
   align-content: center;
   align-items: center;
 }

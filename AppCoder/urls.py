@@ -3,7 +3,7 @@ from django.urls import path, re_path
 from AppCoder import views
 from django.conf import settings 
 from django.conf.urls.static import static 
-
+from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
@@ -28,6 +28,9 @@ urlpatterns = [
     re_path(r'^nuevo$', views.ServicioCreacion.as_view(), name='New'),
     re_path(r'^editar/(?P<pk>\d*)$', views.ServicioUpdate.as_view(), name='Edit'),
     re_path(r'^borrar/(?P<pk>\d*)$', views.ServicioDelete.as_view(), name='Delete'),
+    path('login', views.login_request, name="Login"),
+    path('register', views.register, name='Register'),
+    path('logout', LogoutView.as_view(template_name='AppCoder/logout.html'), name='Logout'),
 
    
 ]
