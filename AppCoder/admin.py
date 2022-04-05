@@ -14,3 +14,5 @@ admin.site.register(Empresa)
 admin.site.register(Clientes)
 
 admin.site.register(Servicio)
+
+admin.site.register(Avatar)

@@ -11430,7 +11430,7 @@ footer.footer {
 
 .fila {
   display: inline-flex;
-  flex-direction: row;
+  flex-wrap:wrap;
 }
 
 .boton-comprar {
@@ -11464,6 +11464,20 @@ footer.footer {
   border:1px solid black;
   border-radius: 10px;
   filter: drop-shadow(3px 3px 6px violet);
+
+}
+
+.box-avatar {
+
+  width: 68px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  filter: drop-shadow(2px 2px 6px white);
+}
+
+
+
 
 }
 
