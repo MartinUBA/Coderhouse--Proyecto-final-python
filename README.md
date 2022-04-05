@@ -23,3 +23,4 @@ Project is: _in progress
 - Sistema de LOGIN
 - Sistema de REGISTER
 - Sistema de LOGOUT
+- Sistema de EDIT USER
