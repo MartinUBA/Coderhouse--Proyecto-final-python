@@ -24,3 +24,5 @@ Project is: _in progress
 - Sistema de REGISTER
 - Sistema de LOGOUT
 - Sistema de EDIT USER
+- Implementación de LOGIN REQUIRED (Decorador)
+- Implementación de AVATAR para usuarios
