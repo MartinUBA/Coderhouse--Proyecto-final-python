@@ -1,4 +1,5 @@
 # PROYECTO FINAL - Página WEB - CODERHOURSE
+INTEGRANTES: NUÑEZ IGARZABAL MARTIN - SAAVEDRA MARIA BELÉN
 
 > Tienda online de venta de videojuegos retro. 
 
