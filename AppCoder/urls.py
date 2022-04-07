@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path, re_path,include
 
 from AppCoder import views
 from django.conf import settings 
@@ -33,6 +33,8 @@ urlpatterns = [
     path('logout', LogoutView.as_view(template_name='AppCoder/logout.html'), name='Logout'),
     path('editarPerfil', views.editarPerfil, name="EditarPerfil"),
     
+    path('carro/', include('carro.urls')),
+    path('carro', views.carro, name="Carro"),
 
    
 ]

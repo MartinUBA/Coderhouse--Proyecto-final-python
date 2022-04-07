@@ -14,13 +14,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 </head>
+<div align="center">
 <body style="align-content: center;">
     <br>
     <form action="" method="POST" class="catalogo">
         {% csrf_token %}
             {{ form.as_p }}
 
-        <button type="submit" style="margin-left: 48px;">Inciar sesion</button>
+        <button type="submit" style="margin-left: 86px;">Inciar sesion</button>
 
     </form>
     <p class="catalogo">No tienes una cuenta 8BITsales? <a href="http://127.0.0.1:8000/AppCoder/register">Registrate ! </a> </p>
@@ -28,5 +29,6 @@
     <br>
     <br>
 </body>
+</div>
 </html>
 {% endblock %}

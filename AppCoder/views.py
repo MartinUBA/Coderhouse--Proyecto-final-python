@@ -34,7 +34,9 @@ def contacto(request):
     
       return render(request, "AppCoder/contacto.html")
 
+def carro(request):
 
+      return render(request,"AppCoder/carro.html")
 
 def juegos(request):
 
@@ -298,3 +300,5 @@ def editarPerfil(request):
         miFormulario = UserEditForm(initial={'email': usuario.email})
 
     return render(request, "AppCoder/editarPerfil.html", {"miFormulario": miFormulario, "usuario": usuario})
+
+

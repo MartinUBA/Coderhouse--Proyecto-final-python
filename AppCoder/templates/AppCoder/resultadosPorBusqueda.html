@@ -20,19 +20,20 @@
 
 <br>
 
-
+<div >
 <ul>
     {% for juego in nombre %}
-    <div class="navbar-brand" >
+    <div class="navbar-brand";">
     <li style="font-weight:bold"> <u> NOMBRE</u>: &nbsp &nbsp {{juego.nombre}} </li>
     <li> <u> PRECIO </u>: &nbsp &nbsp {{juego.precio}} $</li>
     <li> <u> STOCK</u>: &nbsp &nbsp {{juego.stock}} Uni. </li>
-    <li><u>PORTADA</u>:<p class ="catalogo" align="left"> <img src="{{juego.imagen.url}}" alt="" style="width:20%"> </p>
+    <li><u>PORTADA</u>:<p class ="catalogo" style="margin-left:-4px"> <img src="{{juego.imagen.url}}" alt="" style="width:20%"> </p>
     </li>
     </div>
     {% endfor %}
 
 </ul>
+</div>
 </div>
 
 {%else%}

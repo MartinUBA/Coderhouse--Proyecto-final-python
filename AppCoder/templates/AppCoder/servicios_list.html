@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios_List</title>
+    <link href="{%static 'AppCoder/css/styles.css' %}" rel="stylesheet" />
+    <link href="http://fonts.cdnfonts.com/css/8bit-wonder" rel="stylesheet">
 </head>
-<body>
+
+<header class="masthead-juegoFormulario">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="font-pixelart">Servicios admin</h1>
+                    <!-- Signup form-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body class="catalogo">
 
     <h1>Servicios de Tienda 8BITsales</h1>
     <ul>
@@ -25,7 +52,7 @@
         {% endfor %}
     </ul>
 
-    <a href="{% url 'New'  %}">Nuevo</a> | 
+    <a href="{% url 'New'  %}">Nuevo</a> 
 
     <br>
 
@@ -34,4 +61,16 @@
     </button>
 
 </body>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 </html>
+
+

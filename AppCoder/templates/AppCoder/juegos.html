@@ -5,13 +5,19 @@
 {% block contenidoQueCambia %}
 
     <div >
+
         
     <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-    <h4 class="catalogo-precio, font-presstart" align="left" style="color:#2e82ff ;"    >Catálogo: </h4>
+    <h4 class="catalogo-precio, font-presstart" align="center" style="color:#2e82ff ;"    >Catálogo: </h4>
         <br>
         <br>
-    
+ 
+        <div style="float:right;"> 
+       
         
+            {% include "carro/widget.html" %}
+        </div>
+
         {%for juego in juegos %}
         
        
@@ -24,12 +30,12 @@
                 
                 <p class ="catalogo" align="center"> <img src="{{juego.imagen.url}}" alt="" class= "box" style="width: 300px; height: 180px;"> </p>
                 {% endif %}
-                <p class ="catalogo, font-pixelart" align="center" style="color:azure ;">{{juego.nombre}}</p>
-                <p class ="catalogo-precio" align="center">{{juego.precio}} $</p>
+                <p class ="catalogo, font-catalogo" align="center" style="color:azure ;">{{juego.nombre}}</p>
+                <p class ="catalogo-precio" align="center">$ {{juego.precio}} </p>
                 </h5>
                 <!--Agrego boton de compra-->
-                <div class="boton-comprar" style="justify-content: center;">
-                    <p>COMPRAR</p>
+                <div class= "card-footer text-center">
+                    <a href="{% url 'carro:agregar' juego.id%}" class="btn btn-success"> Agregar al carro </a>
 
                 </div>
                 <br>

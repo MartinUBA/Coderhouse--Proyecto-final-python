@@ -334,8 +334,9 @@ tr,
 td,
 th {
   border-color: inherit;
-  border-style: solid;
+  border-style: groove;
   border-width: 0;
+  border-radius: 3px;
 }
 
 label {
@@ -1984,7 +1985,7 @@ progress {
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
-  background-color: var(--bs-table-bg);
+  background-color: #dadada00;
   border-bottom-width: 1px;
   box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
@@ -2008,6 +2009,7 @@ progress {
 
 .table-bordered > :not(caption) > * {
   border-width: 1px 0;
+  border-radius: 5px;
 }
 .table-bordered > :not(caption) > * > * {
   border-width: 0 1px;
@@ -3001,7 +3003,7 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -3023,7 +3025,7 @@ textarea.form-control-lg {
   }
 }
 .btn:hover {
-  color: #212529;
+  color: #0b85ff;
 }
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
@@ -3096,13 +3098,13 @@ textarea.form-control-lg {
 
 .btn-success {
   color: #fff;
-  background-color: #198754;
-  border-color: #198754;
+  background-color: #ab3071;
+  border-color: #000000;
 }
 .btn-success:hover {
   color: #fff;
-  background-color: #157347;
-  border-color: #146c43;
+  background-color: #0787ff;
+  border-color: #000000;
 }
 .btn-check:focus + .btn-success, .btn-success:focus {
   color: #fff;
@@ -7773,7 +7775,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #52aeff !important
 }
 
 .text-black-50 {
@@ -11417,6 +11419,14 @@ footer.footer {
   font-family: 'Press Start 2P', cursive;
 }
 
+.font-catalogo {
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+  filter: drop-shadow(2px 2px 5px black);
+}
+
+
 .catalogo {
 
   color: #f9fafb;
@@ -11479,7 +11489,7 @@ footer.footer {
 
 
 
-}
+
 
 .box-input {
   width: 256px;
@@ -11489,4 +11499,15 @@ footer.footer {
   filter: drop-shadow(3px 3px 6px black);
   align-content: center;
   align-items: center;
+}
+
+
+
+.round_table {
+  border-collapse:separate;
+  border-spacing: 10;
+  border:solid black 1px;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius: 5px;    
 }
