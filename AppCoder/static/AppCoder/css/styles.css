@@ -11479,6 +11479,16 @@ footer.footer {
 
 }
 
+.box-title {
+  width: 175px;
+  height: 77px;
+  border: 1px solid black;
+  border-radius: 10px;
+  filter: drop-shadow(3px 3px 6px black);
+  align-items: inherit;
+  background-color: beige;
+}
+
 .box-avatar {
 
   width: 68px;

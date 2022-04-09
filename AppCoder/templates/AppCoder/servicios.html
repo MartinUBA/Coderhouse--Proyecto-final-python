@@ -9,7 +9,8 @@
     
     <div>
         <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
-        <h4 class="catalogo-precio, font-presstart" align="center" style="color:#2e82ff ;">Servicios: </h4>
+            <h3 style="color:rgb(255, 255, 255); vertical-align: 13px; font-family: 'Montserrat', sans-serif; font-weight: bolder; font-size: 20px;" align="center"    >SERVICIOS </h3>
+
             <br>
             <br>
         
@@ -20,12 +21,13 @@
                 <div class="fila" style="justify-content:space-around;">
                     <div style="padding-left:18px">
                     <h5 style="text-justify: inherit;">
+                        {% if servicio.imagen %}
+                    
+                        <p class ="catalogo" align="center"> <img src="{{servicio.imagen.url}}" alt="" class="box" style="width: 300px; height: 180px;"> </p>
+                        {% endif %}
                     <p class ="catalogo, font-catalogo" align="center" style="color:azure;">{{servicio.servicio}}</p>
                     <p class ="catalogo-precio" align="center">$ {{servicio.precio}} </p>
-                    {% if servicio.imagen %}
                     
-                    <p class ="catalogo" align="center"> <img src="{{servicio.imagen.url}}" alt="" class="box" style="width: 300px; height: 180px;"> </p>
-                    {% endif %}
                     </h5>
                      <!--Agrego boton de compra-->
                     <div class="boton-comprar" style="justify-content: center;">
