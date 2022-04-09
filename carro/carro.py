@@ -52,3 +52,4 @@ class Carro:
     def limpiar_carro(self):
         self.session["Carro"]= {}
         self.session.modified=True 
+        self.guardar_carro()

@@ -31,12 +31,12 @@ def restar_juego(request, juego_id):
 
     carro.restar_producto(juego=juego)
 
-    return redirect ("Juegos")
+    return redirect ("Carro")
 
-def limpiar_carro(request, juego_id):
+def limpiar_carro(request):
     
     carro=Carro(request)
     carro.limpiar_carro()
 
-    return redirect ("Juegos")
+    return redirect ("Carro")
 

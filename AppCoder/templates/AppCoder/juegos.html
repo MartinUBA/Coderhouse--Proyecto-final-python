@@ -12,11 +12,6 @@
         <br>
         <br>
  
-        <div style="float:right;"> 
-       
-        
-            {% include "carro/widget.html" %}
-        </div>
 
         {%for juego in juegos %}
         
@@ -35,7 +30,7 @@
                 </h5>
                 <!--Agrego boton de compra-->
                 <div class= "card-footer text-center">
-                    <a href="{% url 'carro:agregar' juego.id%}" class="btn btn-success"> Agregar al carro </a>
+                    <a href="{% url 'carro:agregar' juego.id%}" class="btn btn-success" style="margin-left:52px"> Agregar al carro </a>
 
                 </div>
                 <br>

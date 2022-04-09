@@ -33,7 +33,7 @@
 
                         <a href="{% url 'carro:agregar' value.juego_id %}" class="btn btn-sm btn-success">+</a>
                         <a href="{% url 'carro:restar' value.juego_id %}" class="btn btn-sm btn-success">-</a><br/>
-
+                        
                         {{value.precio}} €
 
                     </td>
@@ -64,6 +64,8 @@
                 Total: $ {{importe_total_carro}} &nbsp&nbsp&nbsp&nbsp
 
                 <a href="" style="color: aliceblue;"> <i class="fa-solid fa-cart-shopping"></i></a></a>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="{% url 'carro:limpiar' %}" class="btn btn-sm btn-success">Limpiar</a><br/>
             </td>
 
 
