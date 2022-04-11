@@ -34,13 +34,13 @@ def contacto(request):
     
       return render(request, "AppCoder/contacto.html")
 
-
+@login_required
 def juegos(request):
 
       juegos=Juego.objects.all()
       return render(request, "AppCoder/juegos.html", {"juegos": juegos})
 
-
+@login_required
 def servicios(request):
       servicios=Servicio.objects.all()
       return render(request, "AppCoder/servicios.html",{"servicios": servicios})
