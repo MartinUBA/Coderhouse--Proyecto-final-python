@@ -9,15 +9,12 @@ from django.contrib.auth.views import LogoutView
 urlpatterns = [
    
     path('', views.inicio, name="Inicio"), #esta era nuestra primer view
-    #path('cursos', views.cursos, name="Cursos"),
-    #path('profesores', views.profesores, name="Profesores"),
     path('juegos', views.juegos, name="Juegos"),
     path('servicios', views.servicios, name="Servicios"),
     path('juegoFormulario', views.juegoFormulario, name="JuegoFormulario"),
     path('clientesFormulario', views.clientesFormulario, name="ClientesFormulario"),
     path('serviciosFormulario', views.serviciosFormulario, name="ServiciosFormulario"),
     path('contacto', views.contacto, name="Contacto"),
-    #path('profesorFormulario', views.profesorFormulario, name="ProfesorFormulario"),
     path('busquedaJuego',  views.busquedaJuego, name="BusquedaJuego"),
     path('buscar/', views.buscar),
     path('leerJuegos', views.leerJuegos, name = "LeerJuegos"),
