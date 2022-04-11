@@ -1,4 +1,4 @@
-# PROYECTO FINAL - Página WEB - CODERHOURSE
+# PROYECTO FINAL - DESARROLLO DE PÁGINA WEB - CODERHOURSE
 INTEGRANTES: NUÑEZ IGARZABAL MARTIN - SAAVEDRA MARIA BELÉN
 
 > Tienda online de venta de videojuegos retro. 
@@ -8,7 +8,7 @@ INTEGRANTES: NUÑEZ IGARZABAL MARTIN - SAAVEDRA MARIA BELÉN
 
 ## Technologies Used
 - Python - version 3.10.0
-- Django - version 2.0
+- Django - version 3.2
 - Postgres SQL - version 3.0
 
 ## Project Status
